@@ -116,8 +116,8 @@ def main():
     initialize_session_state()
     text = []
 
-    for file in os.listdir("images"):
-        file_path = "./images/" + file
+    for file in os.listdir("documents"):
+        file_path = "./documents/" + file
 
         if file.endswith('.txt'):
             loader = TextLoader(file_path, encoding = 'UTF-8')
