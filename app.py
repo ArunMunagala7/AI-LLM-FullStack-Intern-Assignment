@@ -1,7 +1,7 @@
 import streamlit as st
 import io
 from streamlit_chat import message
-from htmlTemplates import css,bot_template,user_template
+#from htmlTemplates import css,bot_template,user_template
 from langchain.chains import ConversationalRetrievalChain
 from langchain.prompts import SystemMessagePromptTemplate, ChatPromptTemplate, HumanMessagePromptTemplate
 from langchain.embeddings import HuggingFaceEmbeddings
