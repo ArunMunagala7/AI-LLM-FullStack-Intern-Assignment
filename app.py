@@ -79,10 +79,10 @@ def display_chat_history(chain):
 def create_conversational_chain(vector_store):
     load_dotenv()
     # Create llm
-    llm = CTransformers(model="llama-2-7b-chat.ggmlv3.q4_0.bin",
-                        streaming=True, 
-                        callbacks=[StreamingStdOutCallbackHandler()],
-                        model_type="llama", config={'max_new_tokens': 500, 'temperature': 0.01,"context_length":2048})
+    # llm = CTransformers(model="llama-2-7b-chat.ggmlv3.q4_0.bin",
+    #                     streaming=True, 
+    #                     callbacks=[StreamingStdOutCallbackHandler()],
+    #                     model_type="llama", config={'max_new_tokens': 500, 'temperature': 0.01,"context_length":2048})
     general_system_template = r""" 
                   Use only the following pieces of context to answer the question at the end. Do not use any other source apart from the provided context. If you don't know the answer, just say that you don't know, don't try to make up an answer. Use five sentences maximum. Speak in a formal tone.Keep the answer as concise as possible. Always say "thanks for asking!" at the end of the answer. 
                     {context}
@@ -94,12 +94,12 @@ def create_conversational_chain(vector_store):
         ]
     qa_prompt = ChatPromptTemplate.from_messages(messages)
     
-    # llm = Replicate(
-    #     streaming = True,
-    #     model = "replicate/llama-2-70b-chat:58d078176e02c219e11eb4da5a02a7830a283b14cf8f94537af893ccff5ee781", 
-    #     callbacks=[StreamingStdOutCallbackHandler()],
-    #     model_kwargs = {"temperature": 0.01, "max_length" :500,"top_p":1})
-    # llm=HuggingFaceHub(repo_id="meta-llama/Llama-2-70b-chat-hf",model_kwargs={"temperature":0.01, "max_length":500,"top_p":1})
+    llm = Replicate(
+        streaming = True,
+        model = "replicate/llama-2-70b-chat:58d078176e02c219e11eb4da5a02a7830a283b14cf8f94537af893ccff5ee781", 
+        callbacks=[StreamingStdOutCallbackHandler()],
+        model_kwargs = {"temperature": 0.01, "max_length" :500,"top_p":1})
+    # # llm=HuggingFaceHub(repo_id="meta-llama/Llama-2-70b-chat-hf",model_kwargs={"temperature":0.01, "max_length":500,"top_p":1,"context_length":2048})
     memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
     # compressor = CohereRerank()
     # compression_retriever = ContextualCompressionRetriever(
