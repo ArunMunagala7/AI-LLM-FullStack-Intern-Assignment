@@ -1,7 +1,8 @@
 # AI-LLM-FullStack-Intern-Assignment
- 
+ Link to access the Application:llmassignment.streamlit.app
+ INSTRUCTIONS:Upload a document of your choice to start the streamlit application
                                 ASSIGNMENT REPORT
-
+ 
 MULTIPLE DOCUMENT CHAT Q/A INTERFACE
 
 The Interface is an advanced application that combines ChromaDB vector stores, Sentence Transformer embeddings, and the Llama-7 large language model hosted on Replicate to offer a sophisticated question-and-answer experience across multiple documents. ChromaDB vector stores efficiently manage document representations, while Sentence Transformer embeddings enhance the semantic understanding of text. Llama-7, with its state-of-the-art natural language processing capabilities, interprets user queries accurately, providing comprehensive responses. The user-friendly Streamlit deployment ensures a seamless and visually appealing experience, making this interface a powerful tool for precise information retrieval from diverse textual sources.
