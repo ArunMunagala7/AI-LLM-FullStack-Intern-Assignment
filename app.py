@@ -105,7 +105,7 @@ def create_conversational_chain(vector_store):
     # compression_retriever = ContextualCompressionRetriever(
     # base_compressor=compressor, base_retriever=retriever)                                                        )
     chain = ConversationalRetrievalChain.from_llm(llm=llm, chain_type='stuff',
-                                                 retriever=vector_store.as_retriever(search_kwargs={"k": 5}),#,search_type = "mmr"),
+                                                 retriever=vector_store.as_retriever(search_kwargs={"k": 5}),#,search_type = "stuff"),
                                                  memory=memory,combine_docs_chain_kwargs={'prompt': qa_prompt})#,return_source_documents=True,chain_type="map_reduce")
     
     return chain
@@ -116,8 +116,8 @@ def main():
     initialize_session_state()
     text = []
 
-    for file in os.listdir("documents"):
-        file_path = "./documents/" + file
+    for file in os.listdir("docs"):
+        file_path = "./docs/" + file
 
         if file.endswith('.txt'):
             loader = TextLoader(file_path, encoding = 'UTF-8')
@@ -133,7 +133,7 @@ def main():
             continue
         # if loader:
         #     text.extend(loader.load())
-    st.title("Multi-PDF ChatBot using LLAMA-2 :books:")
+    st.title("Multi-Doc ChatBot using LLAMA-2 :books:")
     # Initialize Streamlit
     st.sidebar.title("Document Processing")
     uploaded_files = st.sidebar.file_uploader("Upload files", accept_multiple_files=True)
@@ -175,7 +175,7 @@ def main():
                 extracted_text = " ".join([text for _, text, _ in result])
 
                 # Create a .txt file in the output directory with the extracted text
-                output_file_path = os.path.join("./images/", f"{os.path.splitext(file.name)[0]}.txt")
+                output_file_path = os.path.join("./docs/", f"{os.path.splitext(file.name)[0]}.txt")
                 with open(output_file_path, 'w', encoding='utf-8') as txt_file:
                     txt_file.write(extracted_text)
 
