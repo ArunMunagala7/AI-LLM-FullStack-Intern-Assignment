@@ -43,7 +43,7 @@ MMR (Maximum Marginal Relevance) to obtain the best possible responses by increa
 CONCLUSION
 
 There are still further improvements that can be made to the project to improve the relevancy and accuracy of results whilst also improving resource allocation.
-Methods like Self-Querying and compression can be used to further accuracy, while the LLAMA2 model can also be further fine tuned to accustom it to a specific domain. To help adapt the model to work with a large number of documents, methods like MapReduce could be implemented in the Chain to help improve the performance. 
+Methods like Self-Querying and compression can be used to further accuracy, while the LLAMA2 model can also be further fine tuned to accustom it to a specific domain. To help adapt the model to work with a large number of documents, methods like MapReduce could be implemented in the Chain to help improve the performance. Hypothetical document embeddings could be tested in future iterations of the same
 
 SOURCES
 
