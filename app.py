@@ -104,7 +104,7 @@ def create_conversational_chain(vector_store):
     # compressor = CohereRerank()
     # compression_retriever = ContextualCompressionRetriever(
     # base_compressor=compressor, base_retriever=retriever)                                                        )
-    chain = ConversationalRetrievalChain.from_llm(llm=llm, chain_type='stuff',
+    chain = ConversationalRetrievalChain.from_llm(llm=llm, chain_type='map_reduce',
                                                  retriever=vector_store.as_retriever(search_kwargs={"k": 5}),#,search_type = "stuff"),
                                                  memory=memory,combine_docs_chain_kwargs={'prompt': qa_prompt})#,return_source_documents=True,chain_type="map_reduce")
     
