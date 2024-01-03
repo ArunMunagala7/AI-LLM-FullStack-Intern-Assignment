@@ -47,9 +47,9 @@ Methods like Self-Querying and compression can be used to further accuracy, whil
 
 SOURCES
 
-RAG Optimization
+[RAG Optimization](https://towardsdatascience.com/rag-how-to-talk-to-your-data-eaf5469b83b0)
 
-Retrieval with LLAMA2
+[Retrieval with LLAMA2](https://www.youtube.com/watch?v=93yueQQnqpM)
 
 
 
