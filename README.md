@@ -32,6 +32,8 @@ VECTOR DATABASE USED
 
  Chroma vector database was used to store the embeddings of the inputted data as it supports real time updation of the vector database.  Chroma is a lightweight in-memory DB, so it’s ideal for prototyping.Chroma also retrieves metadata of its documents along with its embeddings, making it useful for displaying sources of its answers.
 
+ Cohere Reranking along with contextual compression is used to further provide better results amongst the documents provided. Instead of immediately returning retrieved documents as-is, we can compress them using the context of the given query, so that only the relevant information is returned.
+
 MODEL HALLUCINATION
 
 Prompt engineering can be used in providing context and preventing generated answers from straying beyond the scope of allotted vector data in large language models (LLMs).  In this way, prompt engineering can be used to prevent hallucination of LLMs. In the submitted assignment, a prompt is made to ensure the responses of the chatbot stays within the vector database provided.
