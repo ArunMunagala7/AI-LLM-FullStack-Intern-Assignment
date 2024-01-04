@@ -1,5 +1,3 @@
-pdfplumber
-pypdf
 streamlit
 streamlit_chat
 langchain
