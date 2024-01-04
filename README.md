@@ -23,7 +23,7 @@ The transformer used is: all-MiniLM-L6-v2.
  It maps sentences & paragraphs to a 384 dimensional dense vector space and can be used for tasks like clustering or semantic search. This Sentence transformer is used also because it is incredibly fast. The models are based on transformer networks like BERT / RoBERTa / XLM-RoBERTa etc. and achieve state-of-the-art performance in various tasks. Text is embedded in vector spaces such that similar text is close and can efficiently be found using cosine similarity.
 
 The Retrieval Process is done as follows:
-Loading: A variety of files such as PDF,DOC,DOCX,TXT,JPG,JPEG,PNG,CSV files and so on can be accepted and converted in to text format. These Text formats are then scraped and loaded into a text variable text.
+Loading: A variety of files such as PDF,DOC,DOCX,TXT,JPG,JPEG,PNG,CSV files and so on can be accepted and converted in to text format. These Text formats are then scraped and loaded into a text variable text. Optical character Recognition is used in extracting text from any sorts of image files.
 Splitting:  CharacterTextSplitter is used to break a long text into smaller chunks of 1000 characters each, with a 100-character overlap between chunks to help store Semantic information, creating a list of text chunks.
 Embedding: An HuggingFace Embedding model the all-MiniLM-L6-v2 is then used to create the embeddings out of the sentences of the text data
 
