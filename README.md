@@ -1,5 +1,4 @@
 # AI-LLM-FullStack-Intern-Assignment
- Link to access the Application:llmassignment.streamlit.app
  
  INSTRUCTIONS:Upload a document of your choice to start the streamlit application, you might need to submit the same question twice at times(bug will be fixed asap)
  
