@@ -17,7 +17,7 @@ Launch the Streamlit interface:
 ```bash
 streamlit run app.py
 ```
-                                
+Make sure to set your own environment variables for Replicate, HuggingFace and Cohere in the .env file.
                                 
                                 
                                
