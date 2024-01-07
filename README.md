@@ -1,6 +1,6 @@
 # AI-LLM-FullStack-Intern-Assignment
  
- INSTRUCTIONS:Upload a document of your choice to start the streamlit application, you might need to submit the same question twice at times(bug will be fixed asap)
+ INSTRUCTIONS:Upload a document of your choice to start the streamlit application.
  
 
  
