@@ -5,6 +5,7 @@
 
  
 ## Running the Code
+Clone the repostiory and follow the instructions below:
 
 Install required libraries:
 
