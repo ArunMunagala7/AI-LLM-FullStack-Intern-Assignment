@@ -49,7 +49,7 @@ def conversation_chat(query, chain, history):
 
 
 def display_chat_history(chain):
-    reply_container = st.container()
+    reply_container = st.container() 
     container = st.container()
     form_key = f'my_form_{len(st.session_state["generated"])}'
     
@@ -124,7 +124,7 @@ def main():
             loader = TextLoader(file_path, encoding = 'UTF-8')
             text.extend(loader.load())
         elif file.endswith('.pdf'):
-            loader = PyPDFLoader(file_path)
+            loader = PyPDFLoader(file_path,extract_images=True)
             text.extend(loader.load())
         elif file.endswith('.docx') or file.endswith('.doc'):
             loader = Docx2txtLoader(file_path)
